@@ -1,0 +1,24 @@
+import {html} from '../../node_modules/lit-html/lit-html.js'
+
+//TODO replace with actual layout according HTML structure
+
+export const layoutTemplate =(userData,content) => html `
+<header>
+            <nav>
+                <a href="/">Theater</a>
+                <ul></ul>
+
+ ${userData ? html`<li><a href="/profile">Profile</a></li>
+                    <li><a href="/create">Create Event</a></li>
+                    <li><a href="/logout">Logout</a></li>` 
+                    : html `<li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>`}
+
+                    </ul>
+            </nav>
+        </header>
+
+<main id="content">
+    ${content}
+</main>
+`
